@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'SedgwickAve-Regular';
+    src: url('../../fonts/SedgwickAve-Regular.ttf') format('truetype');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'SedgwickAve-Regular', sans-serif;
+    
+}
+
+
+.header-menu, footer {
+    position: relative;
+    z-index: 10;
+
+    padding: 20px;
+    text-align: center;
+}
+
+.logo .logo-content {
+    position: absolute;
+    top: 46%;
+    left: 14%;
+    z-index: 10;
+    text-align: center;
+
+}
+
+.conteiner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-content p {
+    color: #fdecaa;
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px +2px 0 #000,
+    +2px +2px 0 #000;
+}
+
+div {
+    display: block;
+}

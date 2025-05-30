@@ -1,0 +1,83 @@
+/* Контейнер карусели */
+.carousel {
+	position: absolute; /* чтобы покрывать всю страницу */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* фон при необходимости */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Создаем слой затемнения */
+.carousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* черный цвет с прозрачностью, регулируйте по необходимости */
+    z-index: 2; /* чтобы слой был поверх фона, но под содержимым */
+}
+
+  /* Обертка слайдов */
+.slides {
+    position: relative;
+    width: 100%; /* или любой размер по желанию */
+    height: 100%;
+}
+
+  /* Все слайды одинакового размера */
+.slide {
+    position: absolute; /* накладываем друг на друга */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* по умолчанию невидимы */
+    transition: opacity 2s ease; /* плавное затухание */
+}
+.slide img {
+    width: 100%;
+    height: auto;
+    /* filter: brightness(50%); */
+    filter: contrast(150%) brightness(100%) grayscale(80%);
+}
+
+/* .overlay {
+  position: absolute;
+  top:0; 
+  left:0;
+  width:100%; 
+  height:100%;
+  background-color: rgba(0,0,0,0.8);
+} */
+
+  /* Активный слайд видим */
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+  /* Навигационные кнопки */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
