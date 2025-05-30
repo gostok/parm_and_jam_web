@@ -5,8 +5,7 @@ footer {
     display: inline-block;
     width: 100%;
     position: absolute;
-    top: 90%;
-    left: 0;
+    bottom: 0;
 }
 
 .site-footer-desktop {
@@ -25,10 +24,11 @@ footer {
 }
 
 .site-footer-desktop-primary-container {
-    padding-top: 0;
-    padding-bottom: 0;
-    text-align: justify;
-    line-height: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
 }
 
 /* primary social-accounts */
@@ -64,7 +64,17 @@ footer {
 }
 
 .site-footer-desktop-primary .social-accounts a img {
-    width: 100%;
+    width: 24px;
+    height: auto;
+}
+
+.site-footer-desktop-primary .social-accounts .icon {
+    color:#fdecaa;
+}
+
+.social-icon {
+    color: #fdecaa;
+    padding: .6em .6em;
 }
 
 /* primary site-nav */
