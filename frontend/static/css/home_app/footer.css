@@ -4,8 +4,8 @@ footer:not(.checkout-footer) {
 footer {
     display: inline-block;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+
 }
 
 .site-footer-desktop {

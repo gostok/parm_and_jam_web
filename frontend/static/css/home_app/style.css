@@ -6,9 +6,9 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100%;
     font-family: 'SedgwickAve-Regular', sans-serif;
-    
+    overflow: hidden;
 }
 
 
@@ -51,4 +51,20 @@ html, body {
 
 div {
     display: block;
+}
+
+.grid-conteiner {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    flex: 0 0 auto;
+}
+main {
+    flex: 1;
+}
+footer {
+    flex: 0 0 auto;
 }
