@@ -6,12 +6,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 40px 40px;
 
     z-index: 10;
     user-select: none;
     font-family: 'SedgwickAve-Regular', sans-serif;
     margin: 0 10px;
+    /* margin-top: 30px; */
 }
 
 

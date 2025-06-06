@@ -1,7 +1,7 @@
 /* Основная часть */
 main {
     margin-top: 80px;
-    min-height: calc(100vh - 120px); /* Убедитесь, что это значение верно */
+    /* min-height: calc(100vh - 120px); Убедитесь, что это значение верно */
     flex: 1; /* Добавьте это свойство */
     padding: 20px 40px;
     color: #fdecaa;

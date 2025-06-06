@@ -14,7 +14,23 @@ html, body {
     font-family: 'SedgwickAve-Regular', sans-serif;
     color: #fdecaa;
     /* background: rgba(0,0,0,0.3); */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto; /* main растягивается и занимает всё доступное пространство */
+}
+
+footer {
+    flex-shrink: 0; /* футер не сжимается */
+}
+
 
 
 
