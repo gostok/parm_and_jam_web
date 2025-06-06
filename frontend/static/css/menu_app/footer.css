@@ -1,9 +1,10 @@
 /* --- Футер --- */
 footer {
-    position: relative;
-    bottom: 0; left: 0; right: 0;
-    height: 12%;
-    
+    position: absolute; /* Измените на absolute */
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    height: 6%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,8 +13,9 @@ footer {
     user-select: none;
     z-index: 10;
     margin-bottom: 0;
-    
+    /* background-color: rgba(0, 0, 0, 0.3); */
 }
+
 
 
 
@@ -22,9 +24,9 @@ footer .middle {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 24px;
+    /* padding: 0 24px; */
     margin-bottom: 4px;
-    padding: 10px 40px;
+    padding: 10px 15%;
     border-top: 2px solid #fdecaa;
 }
 footer .social-icons {
@@ -76,9 +78,9 @@ footer .bottom {
     text-align: center;
     font-size: 13px;
     user-select: none;
-    background: rgba(0,0,0,0.05);
+    /* background: rgba(0,0,0,0.05); */
     height: 100%;
-    padding: 20px;
+    padding: 10px 0;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
@@ -112,6 +114,6 @@ footer .bottom a:hover {
 }
 
 footer .wrapper {
-    background: rgba(0,0,0,0.1);
+    /* background: rgba(0,0,0,0.1); */
     height: 100%;
 }

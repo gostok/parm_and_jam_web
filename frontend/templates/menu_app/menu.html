@@ -18,7 +18,7 @@
 
     <!-- Навигационная панель -->
     <nav role="navigation" aria-label="Главное меню">
-        <div><a href="#" class="brand">Parm & Jam</a></div>
+        <div><a href="{% url 'index' %}" class="brand">Parm & Jam</a></div>
         <ul>
             <li><button type="button" id="btn-menu" onclick="location.href='{% url 'menu' %}'">menu</button></li>
             <li>
@@ -53,7 +53,7 @@
 
         <div class="menu-items">
             <!-- cards -->
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-category="specials">
                 <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sandwiches 1</h5>
@@ -61,7 +61,7 @@
                     <p class="price">10$</p>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-category="specials">
                 <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sandwiches 1</h5>
@@ -69,7 +69,7 @@
                     <p class="price">10$</p>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-category="specials">
                 <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sandwiches 1</h5>
@@ -77,7 +77,31 @@
                     <p class="price">10$</p>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-category="breakfast">
+                <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sandwiches 1</h5>
+                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, perferendis rerum accusantium expedita ea voluptatum velit minima enim earum aspernatur, sed cupiditate ipsam eaque. Eaque nemo fugiat non quis molestiae.</p>
+                    <p class="price">10$</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" data-category="breakfast">
+                <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sandwiches 1</h5>
+                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, perferendis rerum accusantium expedita ea voluptatum velit minima enim earum aspernatur, sed cupiditate ipsam eaque. Eaque nemo fugiat non quis molestiae.</p>
+                    <p class="price">10$</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" data-category="hot_sandwiches">
+                <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sandwiches 1</h5>
+                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, perferendis rerum accusantium expedita ea voluptatum velit minima enim earum aspernatur, sed cupiditate ipsam eaque. Eaque nemo fugiat non quis molestiae.</p>
+                    <p class="price">10$</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" data-category="cold_sandwiches">
                 <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sandwiches 1</h5>
@@ -124,7 +148,7 @@
         </div>
     </footer>
 
-    <script src="../../static/js/home_app/carousel.js"></script>
+    <script src="../../static/js/menu_app/card.js"></script>
     <script src="../../static/js/home_app/navigation.js"></script>
 </body>
 </html>

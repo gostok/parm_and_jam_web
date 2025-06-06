@@ -18,6 +18,8 @@ html, body {
 
 
 
+
+
 /* Фоновая картинка на весь экран, фиксированная, не скроллится */
 .background-image {
     position: fixed;
@@ -30,4 +32,5 @@ html, body {
     z-index: -1;
     background-color: rgba(255, 255, 255, 0.5);
     filter: brightness(0.4);
+    height: 100%;
 }
