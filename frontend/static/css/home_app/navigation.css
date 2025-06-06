@@ -1,0 +1,127 @@
+/* --- Навигационная панель --- */
+nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+    user-select: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 200px; /* Увеличьте или уменьшите расстояние между кнопками здесь */
+    font-weight: 600;
+    font-size: 18px;
+    
+}
+
+nav li {
+    position: relative;
+    cursor: pointer;
+}
+
+nav li > button {
+    background: none;
+    border: none;
+    color: #fdecaa;
+    font-size: 22px;
+    font-weight: inherit;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    font-family: inherit;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px +2px 0 #000,
+    +2px +2px 0 #000;
+}
+
+/* Подчеркивание с анимацией с середины для навигационных кнопок */
+nav li > button::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fdecaa;
+    transition: width 0.3s ease, left 0.3s ease;
+    border-radius: 1px;
+}
+
+nav li > button:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Дропдаун меню */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0);
+    border-radius: 6px;
+    margin-top: 8px;
+    min-width: 140px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0,0,0,0);
+    z-index: 20;
+}
+
+.dropdown button {
+    background: none;
+    border: none;
+    color: #fdecaa;
+    padding: 10px 16px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: inherit;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px +2px 0 #000,
+    +2px +2px 0 #000;
+    position: relative; /* Добавлено для псевдоэлемента */
+}
+
+/* Подчеркивание с анимацией с середины для кнопок в дропдаун меню */
+.dropdown button::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fdecaa;
+    transition: width 0.3s ease, left 0.3s ease;
+    border-radius: 1px;
+}
+
+.dropdown button:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Показ дропдауна при активном классе */
+.dropdown.show {
+    display: flex;
+}

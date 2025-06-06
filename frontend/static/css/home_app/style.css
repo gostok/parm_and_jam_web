@@ -1,70 +1,18 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 @font-face {
     font-family: 'SedgwickAve-Regular';
     src: url('../../fonts/SedgwickAve-Regular.ttf') format('truetype');
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
     height: 100%;
-    font-family: 'SedgwickAve-Regular', sans-serif;
     overflow: hidden;
-}
-
-
-.header-menu, footer {
-    position: relative;
-    z-index: 10;
-
-    padding: 20px;
-    text-align: center;
-}
-
-.logo .logo-content {
-    position: absolute;
-    top: 46%;
-    left: 14%;
-    z-index: 10;
-    text-align: center;
-
-}
-
-.conteiner {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.logo-content p {
+    font-family: 'SedgwickAve-Regular', sans-serif;
     color: #fdecaa;
-    font-size: 100px;
-    font-weight: bold;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000,
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px +2px 0 #000,
-    +2px +2px 0 #000;
-}
-
-div {
-    display: block;
-}
-
-.grid-conteiner {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-header {
-    flex: 0 0 auto;
-}
-main {
-    flex: 1;
-}
-footer {
-    flex: 0 0 auto;
+    background: rgba(0,0,0,0.3);
 }
