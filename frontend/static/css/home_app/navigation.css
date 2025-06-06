@@ -56,7 +56,7 @@ nav li > button::after {
     height: 2px;
     background: #fdecaa;
     transition: width 0.3s ease, left 0.3s ease;
-    border-radius: 1px;
+    border-radius: 4px;
 }
 
 nav li > button:hover::after {
@@ -113,12 +113,18 @@ nav li > button:hover::after {
     height: 2px;
     background: #fdecaa;
     transition: width 0.3s ease, left 0.3s ease;
-    border-radius: 1px;
+    border-radius: 4px;
 }
 
 .dropdown button:hover::after {
     width: 100%;
     left: 0;
+}
+
+/* Дополнительная анимация для фокуса (опционально) */
+.dropdown button:focus::after {
+    width: 100%; /* Увеличиваем ширину до 100% */
+    left: 0; /* Перемещаем влево */
 }
 
 /* Показ дропдауна при активном классе */

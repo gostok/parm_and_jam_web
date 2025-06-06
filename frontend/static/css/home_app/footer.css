@@ -40,9 +40,14 @@ footer .pagination button:hover {
     transform: scale(1.2);
 }
 footer .pagination button svg {
-    fill: white;
+    fill: #fdecaa;
     width: 20px;
     height: 20px;
+    transition: fill 0.3s ease;
+}
+
+footer .pagination button svg:hover {
+    fill: #fff3a0;
 }
 
 /* Средняя часть футера - соцсети и надпись */
