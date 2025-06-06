@@ -1,0 +1,141 @@
+/* Основная часть */
+main {
+
+    margin-top: 30px;
+    min-height: calc(100vh - 120px);
+    padding: 20px 40px;
+    color: #fdecaa;
+    font-family: 'SedgwickAve-Regular', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    position: relative;
+    z-index: 5;
+}
+
+/* Заголовок MENU */
+main h1 {
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+/* Группа кнопок */
+.button-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Кнопки меню */
+.menu-button {
+    background: rgba(255, 255, 255, 0);
+    border: 3px solid #fdecaa;
+    color: #fdecaa;
+    padding: 10px 25px;
+    border-radius: 100%;
+    /* border-radius: 500px; */
+    font-size: 18px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+    user-select: none;
+}
+
+.menu-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Активная кнопка */
+.menu-button.active {
+    background: #fdecaa;
+    color: #000;
+    border-color: #fdecaa;
+}
+
+/* Контейнер карточек */
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Карточка блюда */
+
+.card {
+	padding: 8px 8px;
+	width: 20%;
+	display: inline-block;
+	/* опционально */
+	box-sizing: border-box; 
+}
+
+.card img {
+	filter: grayscale(30%);
+	border-radius:10px;
+	width: 100%;
+}
+
+.card .card-body {
+	background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+	border-radius:5px;
+	padding: 5px 0;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.card .card-title {
+	color: #fdecaa;
+    margin-bottom: 4px;
+}
+.card .card-text {
+    color: white;
+    margin-bottom: 4px;
+}
+.card .price {
+    color: #fdecaa;
+}
+
+
+/* Адаптив для мобильных */
+@media (max-width: 900px) {
+    .menu-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        gap: 20px;
+    }
+    main h1 {
+        font-size: 48px;
+    }
+    .button-group {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .menu-button {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+    .menu-item {
+        width: 100%;
+    }
+}

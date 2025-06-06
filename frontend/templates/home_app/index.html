@@ -22,7 +22,7 @@
     <!-- Навигационная панель -->
     <nav role="navigation" aria-label="Главное меню">
         <ul>
-        <li><button type="button" id="btn-menu">menu</button></li>
+        <li><button type="button" id="btn-menu" onclick="location.href='{% url 'menu' %}'">menu</button></li>
         <li>
             <button type="button" id="btn-shop" aria-haspopup="true" aria-expanded="false">shop</button>
             <div class="dropdown" id="dropdown-shop" role="menu" aria-label="Shop submenu">
