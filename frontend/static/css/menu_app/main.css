@@ -53,13 +53,14 @@ main h1 {
 }
 
 .menu-button:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: #fdecaa;
+    color: #562f2e;
 }
 
 /* Активная кнопка */
 .menu-button.active {
     background: #fdecaa;
-    color: #000;
+    color: #562f2e;
     border-color: #fdecaa;
 }
 
@@ -73,11 +74,43 @@ main h1 {
     width: 100%;
 }
 
+main .description-position {
+    width: 50%;
+    margin: 30px 0;
+}
+
+main .description-position #category-title {
+    color: #fdecaa;
+    font-size: 28px;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+main .description-position #category-description {
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 22px;
+}
+
+hr {
+    border: thin solid #fdecaa;
+    width: 100%;
+    margin: 12px 0; /* Отступы сверху и снизу */
+}
+
+
 /* Карточка блюда */
 
 .card {
 	padding: 8px 8px;
-	width: 20%;
+	width: 25%;
 	display: inline-block;
 	/* опционально */
 	box-sizing: border-box; 
@@ -104,6 +137,7 @@ main h1 {
 .card .card-title {
 	color: #fdecaa;
     margin-bottom: 4px;
+    font-size: 26px;
 }
 .card .card-text {
     color: white;

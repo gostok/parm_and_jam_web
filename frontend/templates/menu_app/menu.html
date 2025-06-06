@@ -51,65 +51,27 @@
             <button class="menu-button" onclick="showCategory('breakfast')">Breakfast</button>
         </div>
 
-        <div class="menu-items">
-            <!-- cards -->
-            <div class="card" style="width: 18rem;" data-category="specials">
-                <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sandwiches 1</h5>
-                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, perferendis rerum accusantium expedita ea voluptatum velit minima enim earum aspernatur, sed cupiditate ipsam eaque. Eaque nemo fugiat non quis molestiae.</p>
-                    <p class="price">10$</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" data-category="specials">
-                <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sandwiches 1</h5>
-                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, perferendis rerum accusantium expedita ea voluptatum velit minima enim earum aspernatur, sed cupiditate ipsam eaque. Eaque nemo fugiat non quis molestiae.</p>
-                    <p class="price">10$</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" data-category="specials">
-                <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sandwiches 1</h5>
-                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, perferendis rerum accusantium expedita ea voluptatum velit minima enim earum aspernatur, sed cupiditate ipsam eaque. Eaque nemo fugiat non quis molestiae.</p>
-                    <p class="price">10$</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" data-category="breakfast">
-                <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sandwiches 1</h5>
-                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, perferendis rerum accusantium expedita ea voluptatum velit minima enim earum aspernatur, sed cupiditate ipsam eaque. Eaque nemo fugiat non quis molestiae.</p>
-                    <p class="price">10$</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" data-category="breakfast">
-                <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sandwiches 1</h5>
-                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, perferendis rerum accusantium expedita ea voluptatum velit minima enim earum aspernatur, sed cupiditate ipsam eaque. Eaque nemo fugiat non quis molestiae.</p>
-                    <p class="price">10$</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" data-category="hot_sandwiches">
-                <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sandwiches 1</h5>
-                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, perferendis rerum accusantium expedita ea voluptatum velit minima enim earum aspernatur, sed cupiditate ipsam eaque. Eaque nemo fugiat non quis molestiae.</p>
-                    <p class="price">10$</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" data-category="cold_sandwiches">
-                <img src="https://img.freepik.com/premium-vector/sandwich_1271422-8079.jpg?semt=ais_hybrid&w=740" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sandwiches 1</h5>
-                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, perferendis rerum accusantium expedita ea voluptatum velit minima enim earum aspernatur, sed cupiditate ipsam eaque. Eaque nemo fugiat non quis molestiae.</p>
-                    <p class="price">10$</p>
-                </div>
-            </div>
+        <div class="description-position">
+            <h3 id="category-title"></h3>
+            <hr>
+            <p id="category-description"></p>
         </div>
+
+        <div class="menu-items">
+            {% for item in items %}
+            <div class="card" style="width: 18rem;" data-category="{{ item.category }}">
+                {% if item.image_url %}
+                <img src="{{ item.image_url.url }}" alt="{{ item.title }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p class="card-text">{{ item.description }}</p>
+                    <p class="price">${{ item.price }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
     </main>
 
     <!-- Футер -->

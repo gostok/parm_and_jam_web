@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # apps
     'home_app',
+    'menu_app',
 ]
 
 MIDDLEWARE = [
@@ -124,6 +125,9 @@ STATIC_ROOT = os.path.join(FRONTEND_DIR, 'static', "staticfiles")
 STATICFILES_DIRS = [
     os.path.join(FRONTEND_DIR, "static"),  # Папка, куда вы перенесли CSS и изображения
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(FRONTEND_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
