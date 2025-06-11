@@ -1,0 +1,32 @@
+/* Основная часть */
+main {
+    /* min-height: calc(100vh - 120px); Убедитесь, что это значение верно */
+    flex: 1; /* Добавьте это свойство */
+    padding: 20px 40px;
+    color: #fdecaa;
+    font-family: 'SedgwickAve-Regular', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    position: relative;
+    z-index: 5;
+    width: 1200px;
+    margin: 80px auto;
+}
+
+
+/* Заголовок MENU */
+main h1 {
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    text-transform: uppercase;
+}
+
