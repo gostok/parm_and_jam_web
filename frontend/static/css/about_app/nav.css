@@ -60,7 +60,7 @@ nav li > button {
 }
 
 /* Подчеркивание для активной кнопки (menu) */
-nav li > button#btn-menu::after {
+nav li > button#btn-about::after {
     content: "";
     position: absolute;
     bottom: -6px;
@@ -72,7 +72,7 @@ nav li > button#btn-menu::after {
 }
 
 /* Подчеркивание при наведении для остальных кнопок */
-nav li > button:not(#btn-menu)::after {
+nav li > button:not(#btn-about)::after {
     content: "";
     position: absolute;
     bottom: -6px;
@@ -84,7 +84,7 @@ nav li > button:not(#btn-menu)::after {
     transition: width 0.3s ease, left 0.3s ease;
 }
 
-nav li > button:not(#btn-menu):hover::after {
+nav li > button:not(#btn-about):hover::after {
     width: 100%;
     left: 0;
 }

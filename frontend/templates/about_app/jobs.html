@@ -51,7 +51,7 @@
             <h3>Хочешь работать - умей и анкету заполнять.</h3>
 
             <label for="name">Имя и Фамилия:</label>
-            <input type="text" id="name" name="name" required placeholder="Ваше имя">
+            <input type="text" id="name" name="name" required placeholder="Имя и Фамилия">
 
             <label for="age">Возраст:</label>
             <input type="number" id="age" name="age" required placeholder="18+">
@@ -76,9 +76,11 @@
             <textarea id="experience" name="experience" rows="4" placeholder="Расскажите о вашем опыте"></textarea>
 
             <p class="text-form-p">Готовность работать в сменах:</p>
-            <label style="color: #fdecaa;"><input type="checkbox" name="shifts" value="morning"> Полная смена </label>
-            <label style="color: #fdecaa;"><input type="checkbox" name="shifts" value="evening"> Подработка </label>
-            <label style="color: #fdecaa;"><input type="checkbox" name="shifts" value="weekends"> Выходные дни</label>
+            <div class="jobs-form-checkbox">
+                <label style="color: #fdecaa;"><input type="checkbox" name="shifts" value="morning"> Полная смена </label>
+                <label style="color: #fdecaa;"><input type="checkbox" name="shifts" value="evening"> Подработка </label>
+                <label style="color: #fdecaa;"><input type="checkbox" name="shifts" value="weekends"> Выходные дни</label>
+            </div>
 
             <label for="motivation">Почему хотите работать у нас?</label>
             <textarea id="motivation" name="motivation" rows="5" placeholder="Ваш ответ"></textarea>
