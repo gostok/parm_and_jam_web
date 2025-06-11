@@ -124,6 +124,7 @@ main h1 {
 .jobs-form input[type="text"],
 .jobs-form input[type="tel"],
 .jobs-form input[type="email"],
+.jobs-form input[type="number"],
 .jobs-form select,
 .jobs-form textarea {
     width: 100%;
@@ -141,12 +142,26 @@ main h1 {
 .jobs-form input[type="text"]:focus,
 .jobs-form input[type="tel"]:focus,
 .jobs-form input[type="email"]:focus,
+.jobs-form input[type="number"]:focus,
 .jobs-form select:focus,
 .jobs-form textarea:focus {
     outline: none;
     border-color: #fdecaa;
     background-color: rgba(86, 47, 46, 0.5);
 }
+
+/* убираем спиннеры в поле ввода type=number */
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0; 
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 
 .jobs-form input[type="checkbox"] {
     margin-right: 8px;
