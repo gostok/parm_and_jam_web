@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # apps
     'home_app',
     'menu_app',
+    'about_app',
 ]
 
 MIDDLEWARE = [

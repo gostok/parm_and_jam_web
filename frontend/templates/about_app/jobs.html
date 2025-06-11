@@ -1,74 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Parm & Jam</title>
-    <link rel="stylesheet" href="../../static/css/home_app/style.css">
-    <link rel="stylesheet" href="../../static/css/home_app/main.css">
-    <link rel="stylesheet" href="../../static/css/home_app/carousel.css">
-    <link rel="stylesheet" href="../../static/css/home_app/navigation.css">
-    <link rel="stylesheet" href="../../static/css/home_app/footer.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Our Story</title>
+    
+    <link rel="stylesheet" href="../../static/css/about_app/style.css">
+    <link rel="stylesheet" href="../../static/css/about_app/main.css">
+    <link rel="stylesheet" href="../../static/css/about_app/nav.css">
+    <link rel="stylesheet" href="../../static/css/about_app/footer.css">
 </head>
 <body>
 
-    <!-- Карусель -->
-    <div id="carousel" aria-label="Фоновая карусель">
-        <div class="slide active" style="background-image: url('../../static/images/main/carousel/carousel_1.jpg');" aria-hidden="false"></div>
-        <div class="slide" style="background-image: url('../../static/images/main/carousel/carousel_2.jpg');" aria-hidden="true"></div>
-        <div class="slide" style="background-image: url('../../static/images/main/carousel/carousel_3.jpg');" aria-hidden="true"></div>
-    </div>
+    <!-- Фоновая картинка -->
+    <div class="background-image"></div>
 
     <!-- Навигационная панель -->
     <nav role="navigation" aria-label="Главное меню">
+        <div><a href="{% url 'index' %}" class="brand">Parm & Jam</a></div>
         <ul>
-        <li><button type="button" id="btn-menu" onclick="location.href='{% url 'menu' %}'">menu</button></li>
-        <li>
-            <button type="button" id="btn-shop" aria-haspopup="true" aria-expanded="false">shop</button>
-            <div class="dropdown" id="dropdown-shop" role="menu" aria-label="Shop submenu">
-            <button type="button" role="menuitem" tabindex="-1">coming soon</button>
-            </div>
-        </li>
-        <li>
-            <button type="button" id="btn-about" aria-haspopup="true" aria-expanded="false">about</button>
-            <div class="dropdown" id="dropdown-about" role="menu" aria-label="About submenu">
-            <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'our_story' %}'">our story</button>
-            <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'location' %}'">locations</button>
-            <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'contact_us' %}'">contact us</button>
-            <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'jobs' %}'">jobs</button>
-            </div>
-        </li>
+            <li><button type="button" id="btn-menu" onclick="location.href='{% url 'menu' %}'">menu</button></li>
+            <li>
+                <button type="button" id="btn-shop" aria-haspopup="true" aria-expanded="false">shop</button>
+                <div class="dropdown" id="dropdown-shop" role="menu" aria-label="Shop submenu">
+                    <button type="button" role="menuitem" tabindex="-1">coming soon</button>
+                </div>
+            </li>
+            <li>
+                <button type="button" id="btn-about" aria-haspopup="true" aria-expanded="false">about</button>
+                <div class="dropdown" id="dropdown-about" role="menu" aria-label="About submenu">
+                    <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'our_story' %}'">our story</button>
+                    <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'location' %}'">locations</button>
+                    <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'contact_us' %}'">contact us</button>
+                    <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'jobs' %}'">jobs</button>
+                </div>
+            </li>
         </ul>
     </nav>
 
     <!-- Основная часть -->
     <main>
-        Parm &amp; Jam
+        <h1>jobs</h1>
+
     </main>
 
     <!-- Футер -->
     <footer>
-        <!-- Пагинация -->
-        <div class="pagination" role="navigation" aria-label="Пагинация карусели">
-            <button type="button" id="prev-slide" aria-label="Предыдущий слайд" title="Previous">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-                </svg>
-            </button>
-            <button type="button" id="play-pause" aria-label="Пауза" title="Play/Pause">
-                <svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="#fdecaa" style="display: block;">
-                    <path d="M8 5v14l11-7z"/>
-                </svg>
-                <svg id="pause-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="#fdecaa" style="display: none;">
-                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-                </svg>
-            </button>
-            <button type="button" id="next-slide" aria-label="Следующий слайд" title="Next">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="#fdecaa">
-                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
-                </svg>
-            </button>
-        </div>
+        
 
         <div class="wrapper">
 
@@ -102,7 +80,7 @@
         </div>
     </footer>
 
-    <script src="../../static/js/home_app/carousel.js"></script>
+    <script src="../../static/js/menu_app/card.js"></script>
     <script src="../../static/js/home_app/navigation.js"></script>
 </body>
 </html>

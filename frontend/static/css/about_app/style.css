@@ -1,0 +1,52 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'SedgwickAve-Regular';
+    src: url('../../fonts/SedgwickAve-Regular.ttf') format('truetype');
+}
+
+html, body {
+    height: 100%;
+    font-family: 'SedgwickAve-Regular', sans-serif;
+    color: #fdecaa;
+    /* background: rgba(0,0,0,0.3); */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto; /* main растягивается и занимает всё доступное пространство */
+}
+
+footer {
+    flex-shrink: 0; /* футер не сжимается */
+}
+
+
+
+
+
+
+/* Фоновая картинка на весь экран, фиксированная, не скроллится */
+.background-image {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('../../images/main/carousel/carousel_3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.5);
+    filter: brightness(0.4);
+    height: 100%;
+}

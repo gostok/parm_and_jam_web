@@ -30,10 +30,10 @@
             <li>
                 <button type="button" id="btn-about" aria-haspopup="true" aria-expanded="false">about</button>
                 <div class="dropdown" id="dropdown-about" role="menu" aria-label="About submenu">
-                    <button type="button" role="menuitem" tabindex="-1">our story</button>
-                    <button type="button" role="menuitem" tabindex="-1">locations</button>
-                    <button type="button" role="menuitem" tabindex="-1">contact us</button>
-                    <button type="button" role="menuitem" tabindex="-1">jobs</button>
+                    <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'our_story' %}'">our story</button>
+                    <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'location' %}'">locations</button>
+                    <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'contact_us' %}'">contact us</button>
+                    <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'jobs' %}'">jobs</button>
                 </div>
             </li>
         </ul>
