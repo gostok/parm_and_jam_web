@@ -1,6 +1,5 @@
 /* Основная часть */
 main {
-    margin-top: 80px;
     /* min-height: calc(100vh - 120px); Убедитесь, что это значение верно */
     flex: 1; /* Добавьте это свойство */
     padding: 20px 40px;
@@ -12,7 +11,8 @@ main {
     user-select: none;
     position: relative;
     z-index: 5;
-    margin-bottom: 80px;
+    width: 1200px;
+    margin: 80px auto;
 }
 
 
@@ -27,6 +27,7 @@ main h1 {
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 0 #000;
+    text-transform: uppercase;
 }
 
 /* our_story */
@@ -78,23 +79,24 @@ main h1 {
 }
 
 /* jobs */
-.jobs-wrapper {
-    background-color: rgba(86, 47, 46, 0.5); /* полупрозрачный чёрный фон */
-    padding: 20px 30px;
-    border-radius: 15px;
-    width: 1100px;
-    color: #fdecaa;
-    font-size: 20px;
-    line-height: 1.6;
-    box-shadow:
-        0 4px 15px rgba(253, 236, 170, 0.4);
-    text-align: center;
-    user-select: text;
+.text-jobs-main, .text-contact-main {
+    width: 80%;
+    color: white;
     margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
+
+
 .jobs-form {
-    width: 80%;
+    width: 70%;
     margin: 10px auto;
     text-align: center;
 }
@@ -104,21 +106,21 @@ main h1 {
     margin: 20px auto;
 }
 
-.jobs-form fieldset {
-    border: #fdecaa thin solid;
-    border-radius: 15px;
 
-}
-.jobs-form legend {
-    color: #fdecaa;
-    text-align: left;
-}
 
-.jobs-form label {
+.jobs-form label, .jobs-form .text-form-p {
     display: block;
     margin: 15px 0 5px;
     font-weight: 600;
+    font-size: 20px;
     text-align: left;
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    margin-top: 20px;
 }
 
 .jobs-form input[type="text"],
@@ -162,6 +164,14 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+.jobs-form select:hover {
+    background-color: rgba(86, 47, 46, 0.5);
+}
+.jobs-form .jobs-form-option {
+    background-color: rgba(86, 47, 46, 0.5);
+    color: #fdecaa;
+}
+
 
 .jobs-form input[type="checkbox"] {
     margin-right: 8px;
@@ -185,13 +195,13 @@ input[type=number] {
     background-color: rgba(253, 236, 170, 0.9);
     border: none;
     border-radius: 15px;
-    padding: 15px 40px;
-    font-size: 24px;
+    padding: 10px 20px;
+    font-size: 20px;
     font-weight: 900;
     color: #562f2e;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 10px;
+    margin-top: 20px;
     user-select: none;
     box-shadow:
         0 4px 15px rgba(253, 236, 170, 0.4);
@@ -206,9 +216,85 @@ input[type=number] {
     background-color: #fdecaa;
 }
 
-.text-form-p {
-    text-align: left;
-    margin-top: 10px;
-    font-weight: 600;
 
+
+
+/* contact_us */
+.text-contact-main a {
+    text-decoration: none;
+    color: #fdecaa;
+}
+
+.contactus-form {
+    width: 70%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.contactus-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.contactus-form input[type="text"],
+.contactus-form input[type="tel"],
+.contactus-form input[type="email"],
+.contactus-form input[type="number"],
+.contactus-form select,
+.contactus-form textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1.5px solid #fdecaa;
+    background-color: rgba(86, 47, 46, 0.3);
+    color: #fdecaa;
+    font-family: 'SedgwickAve-Regular', sans-serif;
+    font-size: 18px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.contactus-form input[type="text"]:focus,
+.contactus-form input[type="tel"]:focus,
+.contactus-form input[type="email"]:focus,
+.contactus-form input[type="number"]:focus,
+.contactus-form select:focus,
+.contactus-form textarea:focus {
+    outline: none;
+    border-color: #fdecaa;
+    background-color: rgba(86, 47, 46, 0.5);
+}
+
+.contactus-form button[type="submit"] {
+    background-color: rgba(253, 236, 170, 0.9);
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #562f2e;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    user-select: none;
+    box-shadow:
+        0 4px 15px rgba(253, 236, 170, 0.4);
+}
+
+.contactus-form button[type="submit"]:hover {
+    background-color: #562f2e;
+    color: #fdecaa;
+}
+
+.contactus-form button[type="submit"]:active {
+    background-color: #fdecaa;
 }

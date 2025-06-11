@@ -40,58 +40,51 @@
 
     <!-- Основная часть -->
     <main>
-        <h1>jobs</h1>
+        <h1>join the family</h1>
+
+        <p class="text-jobs-main">
+            Мы бы хотели, чтобы вы присоединились к нашей команде! Пожалуйста, используйте форму ниже, чтобы подать заявку. Не стесняйтесь отправлять свое резюме, даже если вы не видите в списке позицию, которую ищете.
+        </p>
 
         <!-- main -->
-        <div class="jobs-wrapper">
-            <form action="#" class="jobs-form" method="post">
-                <h3>Хочешь работать - умей и анкету заполнять.</h3>
+        <form action="#" class="jobs-form" method="post">
+            <h3>Хочешь работать - умей и анкету заполнять.</h3>
 
-                <fieldset>
-                    <legend>Контактная информация</legend>
-                    <label for="name">Имя и Фамилия:</label>
-                    <input type="text" id="name" name="name" required placeholder="Ваше имя">
+            <label for="name">Имя и Фамилия:</label>
+            <input type="text" id="name" name="name" required placeholder="Ваше имя">
 
-                    <label for="age">Возраст:</label>
-                    <input type="number" id="age" name="age" required placeholder="18+">
+            <label for="age">Возраст:</label>
+            <input type="number" id="age" name="age" required placeholder="18+">
 
-                    <label for="phone">Телефон:</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="example@mail.com">
-                </fieldset>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="example@mail.com">
 
-                <fieldset>
-                    <legend>Опыт и предпочтения</legend>
-                    <label for="position">Желаемая должность:</label>
-                    <select id="position" name="position" required>
-                        <option value="" disabled selected>Выберите должность</option>
-                        <option value="barista">Бариста</option>
-                        <option value="waiter">Официант</option>
-                        <option value="cook">Повар</option>
-                        <option value="cleaning">Уборщик</option>
-                        <option value="manager">Менеджер</option>
-                    </select>
+            <label for="position">Желаемая должность:</label>
+            <select id="position" name="position" required>
+                <option class="jobs-form-option" value="" disabled selected>Выберите должность</option>
+                <option class="jobs-form-option" value="barista">Бариста</option>
+                <option class="jobs-form-option" value="waiter">Официант</option>
+                <option class="jobs-form-option" value="cook">Повар</option>
+                <option class="jobs-form-option" value="cleaning">Уборщик</option>
+                <option class="jobs-form-option" value="manager">Менеджер</option>
+            </select>
 
-                    <label for="experience">Опыт работы (кратко):</label>
-                    <textarea id="experience" name="experience" rows="4" placeholder="Расскажите о вашем опыте"></textarea>
-        
-                    <p class="text-form-p">Готовность работать в сменах:</p>
-                    <label><input type="checkbox" name="shifts" value="morning"> Полная смена </label>
-                    <label><input type="checkbox" name="shifts" value="evening"> Подработка </label>
-                    <label><input type="checkbox" name="shifts" value="weekends"> Выходные дни</label>
-                </fieldset>
+            <label for="experience">Опыт работы (кратко):</label>
+            <textarea id="experience" name="experience" rows="4" placeholder="Расскажите о вашем опыте"></textarea>
 
-                <fieldset>
-                    <legend>Мотивация</legend>
-                    <label for="motivation">Почему хотите работать у нас?</label>
-                    <textarea id="motivation" name="motivation" rows="5" placeholder="Ваш ответ"></textarea>
-                </fieldset>
+            <p class="text-form-p">Готовность работать в сменах:</p>
+            <label style="color: #fdecaa;"><input type="checkbox" name="shifts" value="morning"> Полная смена </label>
+            <label style="color: #fdecaa;"><input type="checkbox" name="shifts" value="evening"> Подработка </label>
+            <label style="color: #fdecaa;"><input type="checkbox" name="shifts" value="weekends"> Выходные дни</label>
 
-                <button type="submit">Отправить анкету</button>
-            </form>
-        </div>
+            <label for="motivation">Почему хотите работать у нас?</label>
+            <textarea id="motivation" name="motivation" rows="5" placeholder="Ваш ответ"></textarea>
+
+            <button type="submit">Отправить анкету</button>
+        </form>
     </main>
 
     <!-- Футер -->
