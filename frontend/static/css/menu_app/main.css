@@ -147,6 +147,237 @@ hr {
     color: #fdecaa;
 }
 
+/* Кнопки card */
+.menu-items-card-button {
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid #fdecaa;
+    color: #fdecaa;
+    padding: 10px 25px;
+    border-radius: 100%;
+    /* border-radius: 500px; */
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+    user-select: none;
+    
+}
+
+.menu-items-card-button:hover {
+    background: #fdecaa;
+    color: #562f2e;
+}
+
+
+/* cart */
+main .cart {
+    position: fixed;
+    top: 80%;
+    left: 90%;
+    z-index: 20;
+    border: 2px #fdecaa dotted;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+.cart .cart-button {
+    position: relative; /* Позволяет позиционировать элемент с количеством */
+}
+
+.item-count {
+    position: absolute;
+    top: 5px; /* Позиция сверху */
+    right: -10px; /* Позиция справа */
+    background-color: #562f2e; /* Цвет фона */
+    color: #fdecaa; /* Цвет текста */
+    border-radius: 50%; /* Круглая форма */
+    padding: 4px 8px; /* Отступы */
+    font-size: 12px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+}
+
+.cart .cart-button svg {
+
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border: none;
+    outline: none;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px +2px 0 #000,
+    +2px +2px 0 #000;
+}
+.cart .cart-button svg:hover {
+    transform: scale(1.2);
+}
+
+/* Модальное окно cart */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Остается на месте при прокрутке */
+    z-index: 1000; /* На переднем плане */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ширина на весь экран */
+    height: 100%;
+    overflow: auto; /* Прокрутка, если нужно */
+    backdrop-filter: blur(2px); /* Эффект размытия */
+}
+
+.modal-content {
+    background-color: rgba(86, 47, 46, 0.7); /* Цвет фона модального окна */
+    margin: auto; /* Центрирование */
+    padding: 20px;
+    z-index: 1001; /* Убедитесь, что это значение выше, чем у других элементов */
+    border: 2px #fdecaa dotted;
+    width: 600px; /* Ширина модального окна */
+    max-height: 80%; /* Максимальная высота модального окна */
+    display: flex;
+    flex-direction: column; /* Располагаем элементы в колонку */
+    border-radius: 10px; /* Закругленные углы */
+    position: relative; /* Убедитесь, что это значение установлено */
+    top: 45%; /* Центрирование по вертикали */
+    transform: translateY(-50%); /* Центрирование по вертикали */
+    text-align: left;
+    overflow: hidden; /* Скрыть переполнение */
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between; /* Разделение заголовка и кнопки закрытия */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+.wrapper-cart-modal {
+    flex: 1; /* Позволяет занимать оставшееся пространство */
+    display: flex;
+    flex-direction: column; /* Располагаем элементы в колонку */
+    justify-content: center; /* Центрирование содержимого */
+    align-items: center; /* Центрирование по вертикали */
+    overflow-y: auto; /* Прокрутка, если содержимое превышает высоту */
+    margin-bottom: 40px; /* Отступ снизу для пространства перед кнопками */
+    margin-top: 40px;
+}
+
+
+
+/* Стили для кнопки "Удалить" */
+.remove-button {
+    background-color: #fdecaa; /* Цвет фона */
+    border: none; /* Убираем границу */
+    color: #562f2e; /* Цвет текста */
+    padding: 4px 8px; /* Отступы */
+    font-size: 14px; /* Размер шрифта */
+    font-weight: 600;
+    cursor: pointer; /* Указатель при наведении */
+    border-radius: 5px; /* Закругленные углы */
+    margin-left: 15px; /* Отступ слева для отделения от текста */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.remove-button:hover {
+    background-color: #562f2e; /* Цвет фона при наведении */
+    color: #e1c68a; /* Цвет текста при наведении */
+}
+
+
+
+#total-price {
+    margin-bottom: 10px; /* Отступ снизу перед кнопками */
+    color: #fdecaa; /* Цвет текста */
+    font-size: 20px; /* Размер шрифта */
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row; /* Изменяем направление на колонку */
+    align-items: center; /* Центрирование кнопок */
+    margin-top: 20px; /* Отступ сверху для кнопок */
+}
+
+.close-button {
+    color: #fdecaa; /* Цвет кнопки закрытия */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: white; /* Цвет при наведении */
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+/* Стили для кнопки оплаты */
+#pay-button, #clear-button {
+    
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid #fdecaa;
+    color: #fdecaa;
+}
+
+#pay-button:hover, #clear-button:hover {
+    background: #e1c68a;
+    color: #562f2e;
+}
+
+
+#cart-items img {
+    border-radius: 10px;
+}
+
+/* Стилизация полосы прокрутки */
+#cart-items {
+    max-height: 300px; /* Устанавливаем максимальную высоту для прокрутки */
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+}
+
+/* Полоса прокрутки */
+#cart-items::-webkit-scrollbar {
+    width: 10px; /* Ширина полосы прокрутки */
+}
+
+/* Полоса прокрутки - "ползунок" */
+#cart-items::-webkit-scrollbar-thumb {
+    background-color: #e1c68a; /* Цвет ползунка */
+    border-radius: 5px; /* Скругление углов ползунка */
+}
+
+/* Полоса прокрутки - "дорожка" */
+#cart-items::-webkit-scrollbar-track {
+    background: #562f2e; /* Цвет дорожки */
+    border-radius: 5px; /* Скругление углов дорожки */
+}
+
+/* Ползунок при наведении */
+#cart-items::-webkit-scrollbar-thumb:hover {
+    background: #fdecaa; /* Цвет ползунка при наведении */
+}
+
+
+
+
+
+
+
+
+
 
 /* Адаптив для мобильных */
 @media (max-width: 900px) {

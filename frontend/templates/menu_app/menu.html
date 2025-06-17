@@ -66,11 +66,51 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ item.title }}</h5>
                     <p class="card-text">{{ item.description }}</p>
-                    <p class="price">${{ item.price }}</p>
+                    <p class="price">{{ item.price }} руб.</p>
                 </div>
+                <button class="menu-items-card-button">add to cart</button>
             </div>
             {% endfor %}
         </div>
+
+        <!-- корзина -->
+        <div class="cart">
+            <a href="" class="cart-button" style="position: relative;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fdecaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="item-count" style="display: none;">0</span> <!-- Элемент для отображения количества товаров -->
+            </a>
+        </div>
+
+
+        <!-- Модальное окно -->
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Корзина</h2>
+                    <span class="close-button">&times;</span>
+                </div>
+                <div class="wrapper-cart-modal">
+                    <div id="cart-items">
+                        <!-- Здесь будут отображаться добавленные блюда -->
+                    </div>
+                </div>
+                <div class="button-group">
+                    <div id="total-price">
+                        <strong>Итого: </strong><span id="total-amount">0</span> руб.
+                    </div>
+                    <button id="pay-button">Оплатить</button>
+                    <button id="clear-button">Очистить корзину</button> <!-- Кнопка для очистки корзины -->
+                </div>
+            </div>
+        </div>
+
+
+
+
 
     </main>
 
@@ -111,6 +151,7 @@
     </footer>
 
     <script src="../../static/js/menu_app/card.js"></script>
+    <script src="../../static/js/menu_app/cart.js"></script>
     <script src="../../static/js/home_app/navigation.js"></script>
 </body>
 </html>
