@@ -120,3 +120,21 @@ window.onclick = function(event) {
 document.getElementById("clear-button").onclick = function() {
     clearCart();
 };
+
+
+document.getElementById('pay-button').addEventListener('click', async () => {
+    const cartItems = getCartItems(); // ваша функция получения корзины, например [{id: 1, quantity: 2}, ...]
+
+    const response = await fetch('/create_order/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({cart_items: cartItems})
+    });
+
+    if (response.ok) {
+        const data = await response.json();
+        window.location.href = data.confirmation_url;  // перенаправляем на Юкасса
+    } else {
+        alert('Ошибка при создании заказа');
+    }
+});

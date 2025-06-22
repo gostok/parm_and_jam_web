@@ -18,3 +18,19 @@ class MenuItem(models.Model):
 
     def __str__(self):
         return f"{self.title} ({self.category})"
+
+
+# для оплаты
+
+class Order(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    is_paid = models.BooleanField(default=False)
+    payment_id = models.CharField(max_length=100, blank=True, null=True)
+
+
+class OrderItem(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
+    menu_item = models.ForeignKey(MenuItem, on_delete=models.PROTECT)
+    quantity = models.PositiveIntegerField(default=1)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
