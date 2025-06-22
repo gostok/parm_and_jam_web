@@ -1,0 +1,189 @@
+/* media.css */
+
+/* --- Адаптация под планшеты и небольшие экраны (до 768px) --- */
+@media (max-width: 768px) {
+
+    /* Кнопка-бургер */
+    #btn-burger {
+        display: block !important;
+        position: fixed !important;
+        top: 15px !important;
+        right: 20px !important;
+        width: 30px !important;
+        height: 22px !important;
+        cursor: pointer !important;
+        z-index: 9999 !important;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        padding: 0 !important;
+
+    }
+
+    #btn-burger span {
+        display: block !important;
+        height: 3px !important;
+        width: 100% !important;
+        background-color: #fdecaa !important;
+        margin-bottom: 5px !important;
+        border-radius: 2px !important;
+        transition: 0.3s !important;
+    }
+
+    /* Главный заголовок */
+    main {
+        font-size: 42px;
+        letter-spacing: 4px;
+        height: calc(100vh - 100px);
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    /* Навигация */
+    nav {
+        height: 60px;
+        justify-content: flex-start;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    /* Скрываем стандартное горизонтальное меню */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        /* background: rgba(0, 0, 0, 0.8); */
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 150px;
+        border-radius: 0 0 0 8px;
+        box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.5);
+        z-index: 30;
+        padding: 10px 0;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0;
+        
+        padding: 15px 30px;
+        text-align: center;
+    }
+
+    nav ul li > button {
+        font-size: 18px;
+        color: #fdecaa;
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    nav ul li > button:hover,
+    nav ul li > button:focus {
+        background-color: rgba(253, 236, 170, 0.2);
+        outline: none;
+    }
+
+
+
+    /* Когда меню открыто — показываем меню */
+    nav.open ul {
+        display: flex;
+    }
+
+    /* Уменьшаем размер шрифта пунктов меню */
+    nav ul li > button {
+        font-size: 16px;
+    }
+
+    /* Футер */
+    footer {
+        height: 15%;
+        font-size: 12px;
+    }
+    footer .middle {
+        padding: 10px 20px;
+        margin-bottom: 6px;
+    }
+    footer .social-icons svg {
+        width: 18px;
+        height: 18px;
+    }
+    footer .footer-brand {
+        font-size: 14px;
+    }
+
+    /* Карусель */
+    #carousel {
+        filter: brightness(0.5);
+    }
+}
+
+/* --- Адаптация под мобильные телефоны (до 480px) --- */
+@media (max-width: 480px) {
+    /* Главный заголовок */
+    main {
+        font-size: 28px;
+        letter-spacing: 2px;
+        height: calc(100vh - 80px);
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    /* Навигация: вертикальное меню (при открытом состоянии) */
+    nav ul {
+        width: 180px;
+        top: 60px;
+        right: 0;
+    }
+
+    nav ul li > button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    /* Футер */
+    footer {
+        height: auto;
+        padding: 10px 0;
+        font-size: 11px;
+        flex-wrap: wrap;
+    }
+    footer .middle {
+        /* flex-direction: column; */
+        /* align-items: center; */
+        gap: 10px;
+        padding: 10px 15px;
+        margin-bottom: 8px;
+    }
+    footer .social-icons {
+        gap: 12px;
+    }
+    footer .social-icons svg {
+        width: 16px;
+        height: 16px;
+    }
+    footer .footer-brand {
+        font-size: 12px;
+        text-align: center;
+    }
+    footer .bottom {
+        padding: 10px 5px;
+        font-size: 10px;
+    }
+
+    /* Карусель */
+    #carousel .slide {
+        background-position: center center;
+    }
+}
+
+/* --- По умолчанию кнопка-бургер скрыта --- */
+#btn-burger {
+    display: none;
+}

@@ -42,3 +42,23 @@ if (e.key === 'Escape') {
     closeDropdowns();
 }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const btnBurger = document.getElementById('btn-burger');
+    const nav = document.querySelector('nav');
+    const menu = document.getElementById('main-menu');
+
+    btnBurger.addEventListener('click', function() {
+        const expanded = btnBurger.getAttribute('aria-expanded') === 'true' || false;
+        btnBurger.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('open');
+    });
+
+    // Закрытие меню при клике вне меню (опционально)
+    document.addEventListener('click', function(event) {
+        if (!nav.contains(event.target) && nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            btnBurger.setAttribute('aria-expanded', false);
+        }
+    });
+});

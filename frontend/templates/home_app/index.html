@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../static/css/home_app/carousel.css">
     <link rel="stylesheet" href="../../static/css/home_app/navigation.css">
     <link rel="stylesheet" href="../../static/css/home_app/footer.css">
+    <link rel="stylesheet" href="../../static/css/home_app/media.css">
 </head>
 <body>
 
@@ -21,23 +22,32 @@
 
     <!-- Навигационная панель -->
     <nav role="navigation" aria-label="Главное меню">
-        <ul>
-        <li><button type="button" id="btn-menu" onclick="location.href='{% url 'menu' %}'">menu</button></li>
-        <li>
-            <button type="button" id="btn-shop" aria-haspopup="true" aria-expanded="false" onclick="location.href='{% url 'shop' %}'">shop</button>
-            <div class="dropdown" id="dropdown-shop" role="menu" aria-label="Shop submenu">
-            <button type="button" role="menuitem" tabindex="-1">coming soon</button>
-            </div>
-        </li>
-        <li>
-            <button type="button" id="btn-about" aria-haspopup="true" aria-expanded="false">about</button>
-            <div class="dropdown" id="dropdown-about" role="menu" aria-label="About submenu">
-            <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'our_story' %}'">our story</button>
-            <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'location' %}'">locations</button>
-            <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'contact_us' %}'">contact us</button>
-            <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'jobs' %}'">jobs</button>
-            </div>
-        </li>
+
+        <!-- бургер -->
+        <button id="btn-burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- меню-навигация -->
+        <ul id="main-menu">
+            <li><button type="button" id="btn-menu" onclick="location.href='{% url 'menu' %}'">menu</button></li>
+            <li>
+                <button type="button" id="btn-shop" aria-haspopup="true" aria-expanded="false" onclick="location.href='{% url 'shop' %}'">shop</button>
+                <div class="dropdown" id="dropdown-shop" role="menu" aria-label="Shop submenu">
+                <button type="button" role="menuitem" tabindex="-1">coming soon</button>
+                </div>
+            </li>
+            <li>
+                <button type="button" id="btn-about" aria-haspopup="true" aria-expanded="false">about</button>
+                <div class="dropdown" id="dropdown-about" role="menu" aria-label="About submenu">
+                <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'our_story' %}'">our story</button>
+                <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'location' %}'">locations</button>
+                <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'contact_us' %}'">contact us</button>
+                <button type="button" role="menuitem" tabindex="-1" onclick="location.href='{% url 'jobs' %}'">jobs</button>
+                </div>
+            </li>
         </ul>
     </nav>
 
